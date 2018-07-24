@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trackcustomersfx.FXMLDocumentController">
+  <tabs>
+    <Tab text="Add Customer">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button layoutX="123.0" layoutY="253.0" mnemonicParsing="false" onAction="#CustomerInput" prefHeight="26.0" prefWidth="354.0" text="ADD Customer">
+                     <effect>
+                        <DropShadow height="138.82" radius="77.465" width="173.04" />
+                     </effect>
+                  </Button>
+                  <TextField fx:id="Name" layoutX="258.0" layoutY="77.0" prefHeight="26.0" prefWidth="319.0" promptText="Type Customer Name here" />
+                  <TextField fx:id="CustomerNumber" layoutX="258.0" layoutY="35.0" prefHeight="26.0" prefWidth="318.0" promptText="Type Customer  Number here" />
+                  <TextField fx:id="Address" layoutX="259.0" layoutY="117.0" prefHeight="26.0" prefWidth="318.0" promptText="Type Customer Address here" />
+                  <TextField fx:id="PhoneNumber" layoutX="258.0" layoutY="158.0" prefHeight="26.0" prefWidth="318.0" promptText="Type Customer Phone Number here" />
+                  <Label contentDisplay="TOP" depthTest="DISABLE" layoutX="132.0" layoutY="82.0" text="Name:">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Label>
+                  <Label layoutX="122.0" layoutY="40.0" text="Customer Number:">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Label>
+                  <Label layoutX="125.0" layoutY="122.0" text="Address:">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Label>
+                  <Label layoutX="124.0" layoutY="163.0" text="Phone Number:">
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </Label>
+                  <Button layoutX="26.0" layoutY="198.0" mnemonicParsing="false" onAction="#ClearOutput" text="New" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Search Customer">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TabPane prefHeight="145.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="By Number">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="89.0" prefWidth="600.0">
+                                 <children>
+                                    <TextField fx:id="inNumber" layoutX="184.0" layoutY="47.0" prefHeight="26.0" prefWidth="358.0" promptText="Type Customer Number you want to Search" />
+                                    <Label layoutX="51.0" layoutY="52.0" text="Customer Number:">
+                                       <effect>
+                                          <Reflection />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                        <Tab text="By Name">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="146.0" prefWidth="434.0">
+                                 <children>
+                                    <TextField fx:id="inName" layoutX="167.0" layoutY="47.0" prefHeight="26.0" prefWidth="359.0" promptText="Type Customer Name you want to Search" />
+                                    <Label layoutX="51.0" layoutY="52.0" prefHeight="16.0" prefWidth="117.0" text="Customer Name:">
+                                       <effect>
+                                          <Reflection />
+                                       </effect>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <TextArea fx:id="OutputPane" layoutX="6.0" layoutY="213.0" prefHeight="153.0" prefWidth="592.0" />
+                  <Button layoutX="191.0" layoutY="171.0" mnemonicParsing="false" onAction="#CustomerOutput" prefHeight="26.0" prefWidth="287.0" text="SEARCH">
+                     <effect>
+                        <DropShadow height="109.04" radius="69.955" width="172.78" />
+                     </effect>
+                  </Button>
+                  <Label layoutX="14.0" layoutY="191.0" text="Search Results:">
+                     <effect>
+                        <DropShadow height="183.54" radius="103.0625" spread="0.79" width="230.71" />
+                     </effect>
+                  </Label>
+                  <Button layoutX="520.0" layoutY="160.0" mnemonicParsing="false" onAction="#ClearOutput" prefHeight="47.0" prefWidth="66.0" text="Clear &#10;Search" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
